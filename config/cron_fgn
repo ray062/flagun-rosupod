@@ -1,0 +1,3 @@
+# Run logrotate for gunicorn logs every day at midnight
+0 0 * * * /usr/sbin/logrotate /etc/logrotate.d/gunicorn_rotate_logs
+0 0 * * * /usr/sbin/logrotate /etc/logrotate.d/nginx_rotate_logs
