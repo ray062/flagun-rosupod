@@ -38,21 +38,21 @@ Tested with
 It's recommand to have configs, logs, certificates and flask app code outside of the project folder. Then, update build-image.sh with the new values.<br>
 This is an example:
 ```sh
-export REPO_PATH="/path/to/fgn-docker/"
+export REPO_PATH="/path/to/flagun-rosupod/"
 export INSTALL_PATH="/path/to/mywebservice/"
 export LOG_PATH="/var/log/mywebservice/"
 
 mkdir $INSTALL_PATH
 cp -r ${REPO_PATH} ${INSTALL_PATH}
-cp -r "${INSTALL_PATH}fgn-docker/flask_app" "${INSTALL_PATH}flask_app"
-cp -r "${INSTALL_PATH}fgn-docker/config" "${INSTALL_PATH}config"
-cp -r "${INSTALL_PATH}fgn-docker/certificates" "${INSTALL_PATH}certificates"
+cp -r "${INSTALL_PATH}flagun-rosupod/flask_app" "${INSTALL_PATH}flask_app"
+cp -r "${INSTALL_PATH}flagun-rosupod/config" "${INSTALL_PATH}config"
+cp -r "${INSTALL_PATH}flagun-rosupod/certificates" "${INSTALL_PATH}certificates"
 mkdir -p "${LOG_PATH}nginx" "${LOG_PATH}guncorn"
-cp "${INSTALL_PATH}fgn-docker/examples/build-image.sh" "${INSTALL_PATH}fgn-docker/"
-chmod +x "${INSTALL_PATH}fgn-docker/build-image.sh"
+cp "${INSTALL_PATH}flagun-rosupod/examples/build-image.sh" "${INSTALL_PATH}flagun-rosupod/"
+chmod +x "${INSTALL_PATH}flagun-rosupod/build-image.sh"
 
 # Change env var values in the build-image.sh
-nano "${INSTALL_PATH}fgn-docker/build-image.sh"
+nano "${INSTALL_PATH}flagun-rosupod/build-image.sh"
 
 # Generate certificates. For testing purpose, you can leave default for every prompt.
 cd "${INSTALL_PATH}/certificates"
@@ -97,7 +97,7 @@ export XDG_RUNTIME_DIR=/run/user/"$(id -u)"
 # cd to the installaton folder containing the configured build-image.sh
 export CONTAINER_NAME="fgn-docker-mywebservice"
 export INSTALL_PATH="/path/to/mywebservice/"
-cd ${INSTALL_PATH}/fgn-docker
+cd ${INSTALL_PATH}/flagun-rosupod
 ./build-image.sh
 
 # Test the container
