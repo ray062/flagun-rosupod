@@ -47,7 +47,7 @@ cp -r ${REPO_PATH} ${INSTALL_PATH}
 cp -r "${INSTALL_PATH}flagun-rosupod/flask_app" "${INSTALL_PATH}flask_app"
 cp -r "${INSTALL_PATH}flagun-rosupod/config" "${INSTALL_PATH}config"
 cp -r "${INSTALL_PATH}flagun-rosupod/certificates" "${INSTALL_PATH}certificates"
-mkdir -p "${LOG_PATH}nginx" "${LOG_PATH}guncorn"
+mkdir -p "${LOG_PATH}nginx" "${LOG_PATH}gunicorn"
 cp "${INSTALL_PATH}flagun-rosupod/examples/build-image.sh" "${INSTALL_PATH}flagun-rosupod/"
 chmod +x "${INSTALL_PATH}flagun-rosupod/build-image.sh"
 
