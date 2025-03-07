@@ -101,7 +101,7 @@ cd ${INSTALL_PATH}/flagun-rosupod
 ./build-image.sh
 
 # Test the container
-podman start -d "${CONTAINER_NAME}"
+podman start "${CONTAINER_NAME}"
 
 # Do some tests
 
